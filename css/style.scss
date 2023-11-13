@@ -1,0 +1,114 @@
+@use './mixins';
+@use './variables';
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Navigation bar */
+
+.navigation {
+    background-color: variables.$color1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: white;
+    }
+
+    a:hover {
+        background: variables.$hover-color;
+      }
+    
+}
+
+/* Main part */
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    padding: 10px 0;
+
+    .container {
+        background-color: variables.$color2;
+        flex-flow: column wrap;
+        align-items: center;
+        padding-top: 10px;
+
+        .first, .second {
+            text-align: center;
+          }
+        
+          .first p {
+            font-size: 25px;
+          }
+          .second {
+            padding: 10px 50px;
+            align-items: center;
+          }
+        
+          .first img {
+            width: 210px;
+            height: 210px;
+            border-radius: 100%;
+          }
+      }
+
+    .second-container {
+        flex: 50%;
+        padding-top: 10px;
+
+        table, thead, th, td{
+            @include mixins.table();            
+        }
+
+        .progress-bar {
+            background-color: variables.$color3;
+            color: black;
+            font-weight: 700;
+        }
+
+        .accordion-button:not(.collapsed)  {
+            background-color: variables.$color3;
+        }
+  }
+}
+
+/* footer */
+.end {
+    display: flex;
+    background-color:  variables.$color1;
+    justify-content: center;
+    padding-top: 10px;
+
+}
+
+/* Media queries */
+  @media all and (max-width: 420px) {
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-container, .end {
+        flex: 100%;
+    }
+
+    .container, .second-container{
+        flex: 100%;
+    }
+
+  }
+  

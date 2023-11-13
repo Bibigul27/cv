@@ -1,0 +1,95 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Navigation bar */
+.navigation {
+  background-color: rgb(174, 122, 122);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+}
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+.navigation a:hover {
+  background: rgb(226, 158, 169);
+}
+
+/* Main part */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+.main-container .container {
+  background-color: rgb(198, 154, 161);
+  flex-flow: column wrap;
+  align-items: center;
+  padding-top: 10px;
+}
+.main-container .container .first, .main-container .container .second {
+  text-align: center;
+}
+.main-container .container .first p {
+  font-size: 25px;
+}
+.main-container .container .second {
+  padding: 10px 50px;
+  align-items: center;
+}
+.main-container .container .first img {
+  width: 210px;
+  height: 210px;
+  border-radius: 100%;
+}
+.main-container .second-container {
+  flex: 50%;
+  padding-top: 10px;
+}
+.main-container .second-container table, .main-container .second-container thead, .main-container .second-container th, .main-container .second-container td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+.main-container .second-container .progress-bar {
+  background-color: #EADDCA;
+  color: black;
+  font-weight: 700;
+}
+.main-container .second-container .accordion-button:not(.collapsed) {
+  background-color: #EADDCA;
+}
+
+/* footer */
+.end {
+  display: flex;
+  background-color: rgb(174, 122, 122);
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* Media queries */
+@media all and (max-width: 420px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container, .end {
+    flex: 100%;
+  }
+  .container, .second-container {
+    flex: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
