@@ -63,3 +63,19 @@ calcEl.onclick = function() {
     multEl.textContent = +numberOneEl.value  * +numberTwoEl.value 
     divEl.textContent = +numberOneEl.value  / +numberTwoEl.value 
 }
+
+let heightEl = document.getElementById('height')
+let waistEl = document.getElementById('waist')
+let genderEl = document.getElementById('gender')
+let getFatEl = document.getElementById('getFat')
+let result5El = document.getElementById('result5')
+
+getFatEl.onclick = function() {
+    if (genderEl.value == 'Ж') {
+        result5El.textContent = 76 - (20 * +heightEl.value/+waistEl.value)
+    }
+    else if (genderEl.value == 'М') {
+        result5El.textContent = 64 - (20 * +heightEl.value/+waistEl.value)
+    }
+
+}
