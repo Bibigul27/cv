@@ -2,10 +2,9 @@ function putTitlesHTML(products){
     for(prod of products) {
         const result = document.createElement("div")
         const pp = document.createElement("p");
-        p = prod.title
+        pp.textContent = prod.title
         result.appendChild(pp);
         document.body.append(result)
-        debugger
     }
 }
 
